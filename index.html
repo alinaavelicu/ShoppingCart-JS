@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>Shopping-cart</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Shopping Cart</h1>
+      <form id="productForm" action="https://www.google.com">
+        <div class="form-group mb-3">
+          <label for="productName">Nume Produs</label>
+          <input
+            id="productName"
+            class="form-control"
+            name="productName"
+            required
+            type="text"
+          />
+          <div id="productNameError"></div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="productPrice">Pret Produs</label>
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            required
+          />
+          <div id="productPriceError"></div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="productQuantity">Cantitate produs</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productQuantity"
+            required
+          />
+          <div id="productQuantityError"></div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Adauga produs</button>
+          <button id="cancel" type="button" class="btn btn-secondary">
+            Cancel
+          </button>
+        </div>
+      </form>
+
+      <hr />
+
+      <h2>Cos de cumparaturi</h2>
+      <ul id="cart" class="list-group">
+        <div class="cart-total text-right">
+          <strong>Total: RON <span id="cartTotal">0.00</span></strong>
+        </div>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
